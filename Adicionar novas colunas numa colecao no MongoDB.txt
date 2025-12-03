@@ -1,0 +1,35 @@
+Comando no Shell do MongoDB:
+JavaScript
+
+-- Criar nova colecao
+db.experts.insertOne({
+  "nome": "João Silva",
+  "especialidade": "Aves",
+  "tituloacademico": "Veterinário",
+  "biografia": "Especialista em fauna aviária com 10 anos de experiência.",
+  "urlfoto": "https://exemplo.com/joao.jpg"
+});
+
+-- Alterar a coleção - adicionar novas colunas
+db.experts.updateMany(
+  { /* Filtro: {} significa todos os documentos */ },
+  {
+    $set: {
+      "biografia": "", // Adiciona o campo biografia com um valor inicial vazio
+      "urlfoto": ""    // Adiciona o campo urlfoto com um valor inicial vazio
+    }
+  }
+);
+
+db.sponsors.updateMany(
+  { /* Filtro: {} significa todos os documentos */ },
+  {
+    $set: {
+      "url": "", // Adiciona o campo biografia com um valor inicial vazio
+      "nivel": "", // Adiciona o campo biografia com um valor inicial vazio
+      "categoria": "", // Adiciona o campo biografia com um valor inicial vazio
+      "informacoes": "", // Adiciona o campo biografia com um valor inicial vazio
+      "urlfoto": ""    // Adiciona o campo urlfoto com um valor inicial vazio
+    }
+  }
+);
